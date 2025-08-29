@@ -37,7 +37,7 @@ fun CryptoLineChartManualScroll(
     dataPoints: List<Float>,
     visiblePoints: Int = 10,
     pointWidth: Float = 130f,
-    chartHeightDp: Float = 200f,
+    chartHeightDp: Float ,
     goToEndTrigger: Boolean = true,
     onGoToEndConsumed: () -> Unit = {},
     onAutoScrollClicked: (DetailEvents.OnAutoScrollClicked) -> Unit ,
