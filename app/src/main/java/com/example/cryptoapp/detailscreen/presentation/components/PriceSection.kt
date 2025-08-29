@@ -37,50 +37,56 @@ fun PriceSection(coin: CryptoUiModel, onAutoScroll: () -> Unit) {
         Spacer(modifier = Modifier.height(10.dp))
 
         Row(verticalAlignment = Alignment.CenterVertically) {
-            val iconRotation = when {
-                coin.percentChange.value > 0 -> 0f
-                coin.percentChange.value < 0 -> 90f
-                else -> 45f
-            }
-            val iconColor = when {
-                coin.percentChange.value > 0 -> Green
-                coin.percentChange.value < 0 -> Red
-                else -> Color.Yellow
-            }
 
-            Icon(
-                painter = painterResource(id = R.drawable.ic_increasing_sign),
-                tint = iconColor,
-                contentDescription = null,
-                modifier = Modifier.rotate(iconRotation)
-            )
+          Row(modifier = Modifier.weight(1f)) {
+              val iconRotation = when {
+                  coin.percentChange.value > 0 -> 0f
+                  coin.percentChange.value < 0 -> 90f
+                  else -> 45f
+              }
+              val iconColor = when {
+                  coin.percentChange.value > 0 -> Green
+                  coin.percentChange.value < 0 -> Red
+                  else -> Color.Yellow
+              }
 
-            Spacer(modifier = Modifier.width(4.dp))
+              Icon(
+                  painter = painterResource(id = R.drawable.ic_increasing_sign),
+                  tint = iconColor,
+                  contentDescription = null,
+                  modifier = Modifier.rotate(iconRotation)
+              )
 
-            val percentText = when {
-                coin.percentChange.value > 0 -> "+${coin.priceDifference}  (${abs(coin.percentChange.value) }%)"
-                coin.percentChange.value < 0 -> "-${coin.priceDifference}  (${abs(coin.percentChange.value) }%)"
-                else -> "${coin.priceDifference}  (${abs(coin.percentChange.value) }%)"
-            }
+              Spacer(modifier = Modifier.width(4.dp))
 
-            val percentColor = when {
-                coin.percentChange.value > 0 -> Green
-                coin.percentChange.value < 0 -> Red
-                else -> Color.Yellow
-            }
-            Text(
-                text = percentText,
-                style = Bold14,
-                lineHeight = 20.sp,
-                color = percentColor
-            )
+              val percentText = when {
+                  coin.percentChange.value > 0 -> "+${coin.priceDifference}  (${abs(coin.percentChange.value) }%)"
+                  coin.percentChange.value < 0 -> "-${coin.priceDifference}  (${abs(coin.percentChange.value) }%)"
+                  else -> "${coin.priceDifference}  (${abs(coin.percentChange.value) }%)"
+              }
 
+              val percentColor = when {
+                  coin.percentChange.value > 0 -> Green
+                  coin.percentChange.value < 0 -> Red
+                  else -> Color.Yellow
+              }
+              Text(
+                  text = percentText,
+                  style = Bold14,
+                  lineHeight = 20.sp,
+                  color = percentColor
+              )
+          }
             Icon(
                 imageVector = Icons.Default.ArrowForward,
                 tint = White,
                 contentDescription = null,
                 modifier = Modifier.clickable { onAutoScroll() }
             )
+
+
+
         }
+
     }
 }
