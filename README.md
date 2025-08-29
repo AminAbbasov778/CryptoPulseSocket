@@ -11,7 +11,7 @@ It uses **MVI (Model-View-Intent)** architecture, **Clean Architecture**, Kotlin
 
 | Home Page | Detail Page |
 |-----------|-------------|
-| <img src="screenshots/home_page.png" width="200" height="400"> | <img src="screenshots/detail_page.png" width="200" height="400"> |
+| <img src="screenshots/cryptohome.png" width="200" height="400"> | <img src="screenshots/cryptodetail.png" width="200" height="400"> |
 
 ---
 
