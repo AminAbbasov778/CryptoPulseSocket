@@ -84,13 +84,22 @@ fun PriceSection(coin: CryptoUiModel, onAutoScroll: () -> Unit) {
             Spacer(modifier = Modifier.width(4.dp))
 
             val percentText = when {
-                coin.percentChange.value > 0 -> "+${coin.priceDifference} (${abs(coin.percentChange.value)}%)"
-                coin.percentChange.value < 0 -> "-${coin.priceDifference} (${abs(coin.percentChange.value)}%)"
-                else -> "${coin.priceDifference} (${abs(coin.percentChange.value)}%)"
+                coin.percentChange.value > 0 -> "+${coin.priceDifference}  (${abs(coin.percentChange.value) }%)"
+                coin.percentChange.value < 0 -> "-${coin.priceDifference}  (${abs(coin.percentChange.value) }%)"
+                else -> "${coin.priceDifference}  (${abs(coin.percentChange.value) }%)"
             }
-            val percentColor = if (coin.percentChange.value >= 0) Green else Red
 
-            Text(text = percentText, style = Bold14, color = percentColor, modifier = Modifier.weight(1f))
+            val percentColor = when {
+                coin.percentChange.value > 0 -> Green
+                coin.percentChange.value < 0 -> Red
+                else -> Color.Yellow
+            }
+            Text(
+                text = percentText,
+                style = Bold14,
+                lineHeight = 20.sp,
+                color = percentColor
+            )
 
             Icon(
                 imageVector = Icons.Default.ArrowForward,

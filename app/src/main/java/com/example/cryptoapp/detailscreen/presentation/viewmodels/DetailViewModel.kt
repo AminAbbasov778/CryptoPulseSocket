@@ -75,6 +75,9 @@ class DetailViewModel @Inject constructor(
 
 
                     }
+                    if (isLoading.value) {
+                        setLoading(false)
+                    }
                 }else{
                     if (isLoading.value) {
                         setLoading(false)

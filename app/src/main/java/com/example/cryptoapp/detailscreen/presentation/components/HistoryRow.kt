@@ -68,18 +68,26 @@ fun HistoryRow(history: CryptoHistoryUi) {
             Text(text = history.date, style = Regular12, color = Gray)
         }
 
+        val percentText = when {
+            history.percentChange.value > 0 -> "+${history.percentChange.value}%"
+            history.percentChange.value < 0 -> "${history.percentChange.value}%"
+            else -> "${history.percentChange.value}%"
+        }
         val percentColor = when {
             history.percentChange.value > 0 -> Green
             history.percentChange.value < 0 -> Red
             else -> Color.Yellow
         }
 
+
         Text(
-            text = "${history.percentChange.value}%",
+            text = percentText,
             style = Regular14,
             color = percentColor,
             modifier = Modifier.weight(1f),
             textAlign = TextAlign.End
         )
+
+
     }
 }

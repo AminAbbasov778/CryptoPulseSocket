@@ -109,17 +109,25 @@ fun DetailScreen(state: DetailState, onEvents: (DetailEvents) -> Unit, isLoading
                     )
 
                     LazyColumn(
-                        modifier = Modifier.padding(horizontal = 16.dp).fillMaxWidth(),
+                        modifier = Modifier
+                            .fillMaxWidth(),
                         state = listState,
                         reverseLayout = true
-                    ) {
-                        items(coin.cryptoHistory) { history ->
+                    )
+                        {
+                            items(coin.cryptoHistory) { history ->
 
-                            HistoryRow(history)
+                                HistoryRow(history)
+                            }
+                        }
+
+
+                    LaunchedEffect(coin.cryptoHistory.size) {
+                        if (coin.cryptoHistory.isNotEmpty()) {
+                            listState.animateScrollToItem(coin.cryptoHistory.size - 1) // reverseLayout = true olduğuna görə son elementi göstərir
                         }
                     }
                 }
             }
         }
-    }
-}
+    }}
