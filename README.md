@@ -1,4 +1,4 @@
-# 📈 CryptoApp (Real-Time WebSocket + Clean Architecture +MVI + Hilt + Type-Safe Navigation)
+# 📈 CryptoPulseSocket (Real-Time WebSocket + Clean Architecture +MVI + Hilt + Type-Safe Navigation)
 
 CryptoApp is a modern Android application built with Kotlin, designed to deliver **real-time cryptocurrency market data**, including price updates, historical price charts, and detailed coin information. 
 
