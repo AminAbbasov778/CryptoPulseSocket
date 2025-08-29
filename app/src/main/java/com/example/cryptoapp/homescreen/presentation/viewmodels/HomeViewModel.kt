@@ -6,12 +6,10 @@ import com.example.cryptoapp.data.presentation.mappers.toCryptoDomainModel
 import com.example.cryptoapp.data.presentation.mappers.toCryptoUiModel
 import com.example.cryptoapp.data.presentation.mappers.toCryptoUpdateModel
 import com.example.cryptoapp.detailscreen.presentation.navigation.DetailNavigation
-import com.example.cryptoapp.domain.usecases.CryptoDetailUpdatesUseCase
 import com.example.cryptoapp.domain.usecases.CryptoListUpdatesUseCase
 import com.example.cryptoapp.domain.usecases.GetCryptosUseCase
 import com.example.cryptoapp.domain.usecases.MapUpdateToCryptoUseCase
 import com.example.cryptoapp.domain.usecases.SubscribeCryptoListUseCase
-import com.example.cryptoapp.domain.usecases.SubscribeDetailUseCase
 import com.example.cryptoapp.homescreen.presentation.events.HomeEvents
 import com.example.cryptoapp.homescreen.presentation.navigation.HomeNavigation
 import com.example.cryptoapp.homescreen.presentation.state.HomeState
@@ -19,7 +17,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import kotlin.collections.toMutableList
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(

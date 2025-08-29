@@ -6,7 +6,6 @@ import com.example.cryptoapp.data.mappers.toCryptoModel
 import com.example.cryptoapp.data.mappers.toCryptoUpdate
 import com.example.cryptoapp.data.mappers.toCryptoUpdateModel
 import com.example.cryptoapp.data.model.CryptoModel
-import com.example.cryptoapp.data.model.CryptoUpdate
 import com.example.cryptoapp.data.model.PercentChange
 import com.example.cryptoapp.data.network.SocketHandler
 import com.example.cryptoapp.domain.interfaces.CryptoRepository
