@@ -7,11 +7,11 @@ CryptoApp is a modern Android application built with Kotlin, designed to deliver
 It uses **MVI (Model-View-Intent)** architecture, **Clean Architecture**, Kotlin Coroutines, Jetpack Compose, and **type-safe navigation** using Jetpack Navigation for robust and safe screen transitions.
 ---
 
-## 📸 Screenshots
+## 📸 Screenshots & Demo
 
-| Home Page | Detail Page |
-|-----------|-------------|
-| <img src="screenshots/cryptohome.png" width="200" height="400"> | <img src="screenshots/cryptodetail.png" width="200" height="400"> |
+| Home Page | Detail Page | Demo |
+|-----------|-------------|------|
+| <img src="screenshots/cryptohome.png" width="200" height="400"> | <img src="screenshots/cryptodetail.png" width="200" height="400"> | ![CryptoApp Demo](screenshots/crypto_demo.gif) |
 
 ---
 
