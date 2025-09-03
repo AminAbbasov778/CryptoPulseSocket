@@ -9,12 +9,11 @@ It uses **MVI (Model-View-Intent)** architecture, **Clean Architecture**, Kotlin
 
 ## 📸 Screenshots & Demo
 
-| Home Page | Detail Page |
-|-----------|-------------|
-| <img src="screenshots/cryptohome.png" width="200" height="400"> | <img src="screenshots/cryptodetail.png" width="200" height="400"> |
----
+| Home Page | Detail Page | Demo (GIF) |
+|-----------|-------------|------------|
+| <img src="screenshots/cryptohome.png" width="200" height="400"> | <img src="screenshots/cryptodetail.png" width="200" height="400"> | <img src="screenshots/demo.gif" width="200" height="400"> |
 
-## 📱 Key Screens & Features
+---
 
 ### Home Page
 - Displays a list of cryptocurrencies with:
